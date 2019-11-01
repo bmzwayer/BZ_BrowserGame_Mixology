@@ -22,6 +22,7 @@ __A user should be able to:__
 * See the effects of their ingredient selection in the glass
 * Receive an alert after submission if drink submission was correct or incorrect
 * See their level status and drink number
+* Increment the amount of pour __after__ level 1
 
 __A user should _not_ be able to:__
 
@@ -32,7 +33,7 @@ __A user should _not_ be able to:__
 
 ## Wireframes
 ____________________
-
+ ![Wireframe 1](/Users/brookezwayer/Code/browser-game/Mixology scrnsht 1.png)
 
 
 ## Technologies
@@ -43,3 +44,9 @@ HTML- HTML will be used to render text at the genesis of the game to articulate 
 CSS- CSS will be used to style the 'bar' and render selectable ingredients (in the form of image positioning across the bar) needed to play the game. Transitions and animations will be used to fill the glass with the ingredients selected to match the ingredient's properties (color).
 
 Javascript- Javascript will be used throughout to select objects (buttons) from HTML, add event listners, and interact with the user via various choices and checks for accuracy and level progression.
+
+## S t r e t c h   G o a l s
+_____________________________
+
+- Have stir, shaking, etc options and animate the colors of ingredients mixing
+- Personalize a _character_ , ie; Male or Female, user picks name and name is used in alerts
