@@ -46,11 +46,11 @@ ____________________
 ## Technologies
 ______________________
 
-HTML- HTML will be used to render text at the genesis of the game to articulate the objectives and rules of the game. HTML will also be used to indicate to the player what level/drink they are on, and include semantic buttons to guide player through object selection and submission. The ingredients on the bar will likey be img objects in the form of buttons.
+__HTML__- will be used to render text at the genesis of the game to articulate the objectives and rules of the game. HTML will also be used to indicate to the player what level/drink they are on, and include semantic buttons to guide player through object selection and submission. The ingredients on the bar will likey be img objects in the form of buttons.
 
-CSS- CSS will be used to style the 'bar' and render selectable ingredients (in the form of image positioning across the bar) needed to play the game. Transitions and animations will be used to fill the glass with the ingredients selected to match the ingredient's properties (color).
+__CSS__-  will be used to style the 'bar' and render selectable ingredients (in the form of image positioning across the bar) needed to play the game. Transitions and animations will be used to fill the glass with the ingredients selected to match the ingredient's properties (color).
 
-Javascript- Javascript will be used throughout to select objects (buttons) from HTML, add event listners, and interact with the user via various choices and checks for accuracy and level progression.
+__Javascript__- will be used throughout to select objects (buttons) from HTML, add event listners, and interact with the user via various choices and checks for accuracy and level progression.
 
 ## S t r e t c h   G o a l s
 _____________________________
