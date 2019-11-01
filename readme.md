@@ -33,7 +33,7 @@ __A user should _not_ be able to:__
 
 ## Wireframes
 ____________________
- ![Wireframe 1](/https://github.com/bmzwayer/BZ_BrowserGame_Mixology/blob/master/Mixology%20scrnsht%201.png)
+ ![Wireframe 4](/https://github.com/bmzwayer/BZ_BrowserGame_Mixology/blob/master/Mixology%20scrnsht%201.png)
 
 
 ## Technologies
