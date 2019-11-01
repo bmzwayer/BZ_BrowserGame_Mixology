@@ -33,6 +33,9 @@ __A user should _not_ be able to:__
 
 ## Wireframes
 ____________________
+ ![Wireframe 1]()
+ ![Wireframe 2]()
+ ![Wireframe 3]()
  ![Wireframe 4](https://github.com/bmzwayer/BZ_BrowserGame_Mixology/blob/master/mixologyscrnsht4.png)
 
 
