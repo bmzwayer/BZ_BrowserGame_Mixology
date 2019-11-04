@@ -42,15 +42,7 @@ Pull objects via getElementById for all ingredient buttons
 //event listener for all objects on page
 //object chose must reflect object color in the cup
 
-const drinks = [oldFashioned, margarita];
-    
-
-const easyDrinks = []
-
-const mediumDrinks = []
-
-const difficultDrinks = []
-
+//liquors
 const bourbonEl= document.getElementById(bourbon);
 const vodkaEl= document.getElementById(vodka);
 const ginEl= document.getElementById(gin);
@@ -59,8 +51,44 @@ const tequillaEl= document.getElementById(tequilla);
 const rumEl= document.getElementById(rum);
 const lightRumEl= document.getElementById(lightRum);
 
+//addins
 const bittersEl= document.getElementById(bitters);
+const cointreauEl= document.getElementById(cointreau);
+const limeJuiceEl= document.getElementById(limeJuice);
+const cranberryJuiceEl= document.getElementById(cranberryJuice);
 
+//garnish
 const sugarEl= document.getElementById(sugar);
 const orangePeelEl= document.getElementById(orangePeel);
+const saltEl= document.getElementById(salt);
+
+//drinks with ingredients
+const oldFashioned = {
+    liquor: [2oz, bourbonEl]
+    addins: [dash, bittersEl]
+    garnish: orangePeelEl
+};
+
+const margarita = {
+    liquor: [2oz, tequillaEl,]
+    addins: 
+    garnish:
+};
+
+const cosmopolitan = {
+    liquor:
+    addins:
+    garnish:
+};
+
+const drinks = [oldFashioned, margarita, cosmopolitan];
+
+
+
+const easyDrinks = []
+
+const mediumDrinks = []
+
+const difficultDrinks = []
+
 
