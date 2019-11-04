@@ -3,6 +3,8 @@ _____________________
 
 The goal of the game is to work your way from novice to Bar Manager by passing three levels of mixology challenges that test your knowledge on increasingly diffucult drinks. As the you progress through the levels, the complexity of the drinks increase and proportional measurements come into play. In the final level, your patrons will use flavor descriptors to tell you what type of drink they are in the mood for and you must choose off the cocktail menu the most appropriate option, as well as make it correctly. If you pass all 3 levels, you win the game.
 
+This game is intended to be a fun way of learning about various common cocktails and how to make them.
+
 ### Details
 _____________________
 
@@ -57,3 +59,4 @@ _____________________________
 
 - Have stir, shaking, etc options and animate the colors of ingredients mixing
 - Personalize a _character_ , ie; Male or Female, user picks name and name is used in alerts
+- When you hover over an ingredient, it shows the name and a little information about its flavor and/or history
