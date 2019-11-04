@@ -43,52 +43,132 @@ Pull objects via getElementById for all ingredient buttons
 //object chose must reflect object color in the cup
 
 //liquors
-const bourbonEl= document.getElementById(bourbon);
-const vodkaEl= document.getElementById(vodka);
-const ginEl= document.getElementById(gin);
-const whiskeyEl= document.getElementById(whiskey);
-const tequillaEl= document.getElementById(tequilla);
-const rumEl= document.getElementById(rum);
-const lightRumEl= document.getElementById(lightRum);
+// const bourbonEl= document.getElementById(bourbon);
+// const vodkaEl= document.getElementById(vodka);
+// const ginEl= document.getElementById(gin);
+// const whiskeyEl= document.getElementById(whiskey);
+// const tequillaEl= document.getElementById(tequilla);
+// const rumEl= document.getElementById(rum);
+// const lightRumEl= document.getElementById(lightRum);
 
-//addins
-const bittersEl= document.getElementById(bitters);
-const cointreauEl= document.getElementById(cointreau);
-const limeJuiceEl= document.getElementById(limeJuice);
-const cranberryJuiceEl= document.getElementById(cranberryJuice);
+// //addins
+// const bittersEl= document.getElementById(bitters);
+// const cointreauEl= document.getElementById(cointreau);
+// const limeJuiceEl= document.getElementById(limeJuice);
+// const cranberryJuiceEl= document.getElementById(cranberryJuice);
 
 //garnish
-const sugarEl= document.getElementById(sugar);
-const orangePeelEl= document.getElementById(orangePeel);
-const saltEl= document.getElementById(salt);
+// const sugarEl= document.getElementById(sugar);
+// const orangePeelEl= document.getElementById(orangePeel);
+// const saltEl= document.getElementById(salt);
 
 //drinks with ingredients
-const oldFashioned = {
-    liquor: [2oz, bourbonEl]
-    addins: [dash, bittersEl]
-    garnish: orangePeelEl
-};
+const cocktails = [
+    {
+        name: "old fashion",
+        liquor: "bourbon",
+        mixer: "bitters",
+        garnish: "orange peel",
 
-const margarita = {
-    liquor: [2oz, tequillaEl,]
-    addins: 
-    garnish:
-};
+    },
+    {
+        name: "margarita",
+        liquor: ["tequila", "cointreau"],
+        mixer: "lime juice",
+        garnish: "salt on the rim",
+    }
+    {
+        name: "cosmopolitan",
+        liquor: ["vodka", "cointreau"],
+        mixer: ["lime juice", "cranberry juice"],
+        garnish: null
+    }
+    {
+        name: "negroni"
+        liquor: ["gin", "campari, vermouth"],
+        mixer: null,
+        garnish: null,
+    }
+    {
+        name: "moscow mule",
+        liquor: "vodka",
+        mixer: "ginger beer",
+        garnish: "lime",
+    }
+    {
+        name: "sidecar",
+        liquor: ["cognac", "cointreau"],
+        mixer: "lemon juice",
+        garnish: null,
+    }
+    {
+        name: "manhattan",
+        liquor: ["tequila", "cointreau"],
+        mixer: "lime juice",
+        garnish: "salt on the rim",
+    }
+    {
+        name: "paloma",
+        liquor: "tequila",
+        mixer: ["lime juice", "grapefruit juice"]
+        garnish: null,
+    }
+    {
+        name: "sazerac",
+        liquor: "whiskey",
+        mixer: ["simple syrup", "bitters", "absinthe"]
+        garnish: null,
+    }
+    {
+        name: "french 75",
+        liquor: ["gin", "champagne"],
+        mixer: ["simple syrup" "lemon juice"],
+        garnish: null,
+    }
+]
 
-const cosmopolitan = {
-    liquor:
-    addins:
-    garnish:
-};
+// if the guess for liquor is === my object.liquor  then say yes you got it right or say no try again. 
 
-const drinks = [oldFashioned, margarita, cosmopolitan];
+const guesses = []
+
+guesses ["bourbon", "lime juice", "sugar"]
+
+// if the value of the things in side my array match the value of the things inside my database 
+// then the guess is correct. 
+
+console.log(cocktails[0].name, cocktails[1].liquor[1])
+
+// const oldFashioned = {
+//     liquor: [2oz, bourbonEl],
+//     addins: [.25, bittersEl],
+//     garnish: orangePeelEl
+// };
+
+// const margarita = {
+//     liquor: [2oz, tequillaEl, 1oz, cointreauEl]
+//     addins: [1oz, limeJuiceEl]
+//     garnish: saltEl
+// };
+
+// const cosmopolitan = {
+//     liquor: [1.5oz, vodkaEl, 1oz, cointreauEl]
+//     addins: [.5oz, limeJuiceEl, .25oz, cranberryJuiceEl]
+//     garnish: null
+// };
+
+// const drinks = [oldFashioned, margarita, cosmopolitan];
 
 
 
-const easyDrinks = []
+// const easyDrinks = []
 
-const mediumDrinks = []
+// const mediumDrinks = []
 
-const difficultDrinks = []
+// const difficultDrinks = []
 
+// var makeDrink = document.getElementById(drinkName);
+//      
+// }
+
+// renderDrink()
 
