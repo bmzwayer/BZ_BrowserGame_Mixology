@@ -63,80 +63,126 @@ Pull objects via getElementById for all ingredient buttons
 // const saltEl= document.getElementById(salt);
 
 //drinks with ingredients
+//___________________________________________________________________
+//apps state (variables)
+
+ 
+
+
+//cached----------------------------
+
+// const guessedCocktailEl = document.getElementById(cocktailName);
+
+//constants-------------------------
+
+
+//functions-------------------------*/
+
+
+
 const cocktails = [
     {
         name: "old fashion",
-        liquor: "bourbon",
-        mixer: "bitters",
-        garnish: "orange peel",
+        ingredients: ["Bourbon", "Bitters", "Orange Peel"],
 
     },
     {
         name: "margarita",
-        liquor: ["tequila", "cointreau"],
-        mixer: "lime juice",
-        garnish: "salt on the rim",
-    }
+        ingredients: ["Tequila", "Cointreau","Lime Juice", "Salt"],
+    },
     {
         name: "cosmopolitan",
-        liquor: ["vodka", "cointreau"],
-        mixer: ["lime juice", "cranberry juice"],
-        garnish: null
-    }
+        ingredients: ["Vodka", "Cointreau", "Lime Juice", "Cranberry Juice"],
+    },
     {
-        name: "negroni"
-        liquor: ["gin", "campari, vermouth"],
-        mixer: null,
-        garnish: null,
-    }
+        name: "negroni",
+        ingredients: ["Gin", "Campari", "Vermouth"],
+    },
     {
         name: "moscow mule",
-        liquor: "vodka",
-        mixer: "ginger beer",
-        garnish: "lime",
-    }
+        ingredients: ["Vodka","Ginger Beer","Lime"],
+    },
     {
         name: "sidecar",
-        liquor: ["cognac", "cointreau"],
-        mixer: "lemon juice",
-        garnish: null,
-    }
+        ingredients: ["Cognac", "Cointreau","Lemon Juice"],
+    },
     {
         name: "manhattan",
-        liquor: ["tequila", "cointreau"],
-        mixer: "lime juice",
-        garnish: "salt on the rim",
-    }
+        ingredients: ["Tequila", "Cointreau","Lime Juice","Salt"],
+    },
     {
         name: "paloma",
-        liquor: "tequila",
-        mixer: ["lime juice", "grapefruit juice"]
-        garnish: null,
-    }
+        ingredients: ["Tequila","Lime Juice","Grapefruit Juice"],
+    },
     {
         name: "sazerac",
-        liquor: "whiskey",
-        mixer: ["simple syrup", "bitters", "absinthe"]
-        garnish: null,
-    }
+        ingredients: ["Whiskey","Simple Syrup","Bitters","Absinthe"],
+    },
     {
         name: "french 75",
-        liquor: ["gin", "champagne"],
-        mixer: ["simple syrup" "lemon juice"],
-        garnish: null,
+        ingredients: ["Gin", "Champagne","Simple Syrup","Lemon Juice"],
     }
 ]
 
 // if the guess for liquor is === my object.liquor  then say yes you got it right or say no try again. 
 
-const guesses = []
+// const guesses = []
 
-guesses ["bourbon", "lime juice", "sugar"]
+// guesses ["bourbon", "lime juice", "sugar"]
 
 // if the value of the things in side my array match the value of the things inside my database 
 // then the guess is correct. 
 
-console.log(cocktails[0].name, cocktails[1].liquor[1])
+// console.log(cocktails[0].name, cocktails[1].liquor[1])
+
+// init();
+
+// function render() {
+//     guessedCocktailEl.textContent = guessedIng;
+// }
+
+
+const displayEl = document.querySelector('span');
+const topShelf = document.getElementById("topShelf")
+
+let rndmCocktailIdx;
+// const ingredients = document.querySelectorAll('.ing')
+
+
+// console.log(ingredients)
+
+topShelf.addEventListener("click", function(e){
+    console.log(e.target.alt)
+    let currentDrink = cocktails[rndmCocktailIdx]
+
+    if(e.target.alt === undefined) return
+
+    if(currentDrink.ingredients.includes(e.target.alt) ){
+        console.log("match")
+    } else {
+        console.log("no match")
+    }
+    
+})
+
+document.querySelector("button")
+    .addEventListener("click", function() {
+    rndmCocktailIdx = Math.floor(Math.random() * cocktails.length); //pulls a random index of cocktails
+    displayEl.innerText = cocktails[rndmCocktailIdx].name; //logs the name associated with that index
+
+});
+
+
+//     guessedIng = "_".repeat(orderedCocktail.length);
+//     ingredientsUsed = [];
+//     wrongIng = [];
+//     render();
+// }
+// var displayDrinkEl;
+
+// document.querySelector('.start').addEventListener('click', function() {;
+//     render();
+//   });
 
 // const oldFashioned = {
 //     liquor: [2oz, bourbonEl],

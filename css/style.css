@@ -1,3 +1,9 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-image: images("/images/backgroundBar.png");
+}
 li {
     display: inline-block;
     padding: 20px;
@@ -5,4 +11,7 @@ li {
 img {
     max-height: 60px;
     width: auto;
+}
+h1 span {
+    background-color: lightgrey;
 }
