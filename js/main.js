@@ -195,13 +195,74 @@ document.getElementById("start")
 
 function renderCup(evt) {
     let selectedIngredient = evt.target.getAttribute('alt');
+    let bigDiv = document.getElementById('glass');
     switch(selectedIngredient) {
         case 'Cranberry Juice':
             console.log('you picked cranberry');
-            let mainDiv = document.getElementById('glass');
             let cranDiv =  document.createElement('div');
-            cranDiv.style.backgroundColor =  'red';
-            appendChild(cranDiv);
+            cranDiv.classList.add('cranBox');
+            bigDiv.appendChild(cranDiv);
+            break;
+        case 'Lime Juice':
+            console.log('you picked lime juice');
+            let limeDiv =  document.createElement('div');
+            limeDiv.classList.add('limeBox');
+            bigDiv.appendChild(limeDiv);
+            break;
+        case 'Bitters':
+            console.log('you picked bitters');
+            let bittersDiv =  document.createElement('div');
+            bittersDiv.classList.add('bittersBox');
+            bigDiv.appendChild(bittersDiv);
+            break;
+        case 'Cointreau':
+            console.log('you picked cointreau');
+            let cointreauDiv =  document.createElement('div');
+            cointreauDiv.classList.add('cointreauBox');
+            bigDiv.appendChild(cointreauDiv);
+            break;
+        case 'Absinthe':
+            console.log('you picked absinthe');
+            let absintheDiv =  document.createElement('div');
+            absintheDiv.classList.add('absintheBox');
+            bigDiv.appendChild(limeDiv);
+            break;
+        case 'Simple Syrup':
+            console.log('you picked simple syrup');
+            let simpsyrupDiv =  document.createElement('div');
+            simpsyrupDiv.classList.add('simpsyrupBox');
+            bigDiv.appendChild(simpsyrupDiv);
+            break;
+        case 'Grapefruit Juice':
+            console.log('you picked grapefruit juice');
+            let grapefruitDiv =  document.createElement('div');
+            grapefruitDiv.classList.add('grapefruitBox');
+            bigDiv.appendChild(grapefruitDiv);
+            break;
+        case 'Champagne':
+            console.log('you picked champagne');
+            let champagneDiv =  document.createElement('div');
+            champagneDiv.classList.add('champagneBox');
+            bigDiv.appendChild(champagneDiv);
+            break;
+        case 'Cognac':
+            console.log('you picked cognac');
+            let cognacDiv =  document.createElement('div');
+            cognacDiv.classList.add('cognacBox');
+            bigDiv.appendChild(cognacDiv);
+            break;
+        case 'Ginger Beer':
+            console.log('you picked ginger beer');
+            let gingerbeerDiv =  document.createElement('div');
+            gingerbeerDiv.classList.add('gingerbeerBox');
+            bigDiv.appendChild(gingerbeerDiv);
+            break;
+        case 'Vermouth':
+            console.log('you picked vermouth');
+            let vermouthDiv =  document.createElement('div');
+            vermouthDiv.classList.add('vermouthBox');
+            bigDiv.appendChild(vermouthDiv);
+            break;
     }
     
     

@@ -2,15 +2,18 @@
     box-sizing: border-box;
 }
 body {
-    display: flexbox;
-
+    background-image: url("../images/backgroundImg.png");
+    height: auto;
+    width: auto;
+    background-repeat: no-repeat;
+    background-position-y: 80px;
 }
 li {
     display: inline-block;
     padding: 10px;
 }
 img {
-    max-height: 60px;
+    max-height: 40px;
     width: auto;
 }
 h1 span {
@@ -24,6 +27,39 @@ h1 span {
     transition: .5s ease;
     backface-visibility: hidden;
   }
-  img:hover {
-      max-height: 70px;
+  .ing:hover {
+      transform: scale(1.5);
   }
+
+  #glass {
+      display: flex;
+      border: solid black;
+      flex-direction: column-reverse;
+      background-image:  url("../images/drinkingglass.png");
+      height: 200px;
+      width: 200px;
+
+  }
+#liquors {
+    display:inline-flex;
+}
+
+#components {
+    display: flex;
+    flex-direction: column;
+}
+
+  .cranBox {
+      background-color: red;
+      position:absolute;
+      width: 40px; /*this needs to be the width of the parent container */
+      height: 40px;
+  }
+
+
+  .limeBox {
+    background-color: green;
+    position:absolute;
+    width: 40px; /*this needs to be the width of the parent container */
+    height: 40px;
+}
