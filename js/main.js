@@ -82,44 +82,43 @@ Pull objects via getElementById for all ingredient buttons
 
 const cocktails = [
     {
-        name: "old fashion",
+        name: "Old Fashion",
         ingredients: ["Bourbon", "Bitters", "Orange Peel"],
-
     },
     {
-        name: "margarita",
+        name: "Margarita",
         ingredients: ["Tequila", "Cointreau","Lime Juice", "Salt"],
     },
     {
-        name: "cosmopolitan",
+        name: "Cosmopolitan",
         ingredients: ["Vodka", "Cointreau", "Lime Juice", "Cranberry Juice"],
     },
     {
-        name: "negroni",
+        name: "Negroni",
         ingredients: ["Gin", "Campari", "Vermouth"],
     },
     {
-        name: "moscow mule",
+        name: "Moscow Mule",
         ingredients: ["Vodka","Ginger Beer","Lime"],
     },
     {
-        name: "sidecar",
+        name: "Sidecar",
         ingredients: ["Cognac", "Cointreau","Lemon Juice"],
     },
     {
-        name: "manhattan",
+        name: "Manhattan",
         ingredients: ["Tequila", "Cointreau","Lime Juice","Salt"],
     },
     {
-        name: "paloma",
+        name: "Paloma",
         ingredients: ["Tequila","Lime Juice","Grapefruit Juice"],
     },
     {
-        name: "sazerac",
+        name: "Sazerac",
         ingredients: ["Whiskey","Simple Syrup","Bitters","Absinthe"],
     },
     {
-        name: "french 75",
+        name: "French 75",
         ingredients: ["Gin", "Champagne","Simple Syrup","Lemon Juice"],
     }
 ]
@@ -143,78 +142,104 @@ const cocktails = [
 
 
 const displayEl = document.querySelector('span');
-const topShelf = document.getElementById("topShelf")
-
+const pouroutBtn = document.getElementById("pourout");
+const exitBtn = document.getElementById("exitGame");
+const ingredients = document.querySelectorAll('.ing')
+let round = '';
 let rndmCocktailIdx;
-// const ingredients = document.querySelectorAll('.ing')
+
+let guess = [];
 
 
-// console.log(ingredients)
 
-topShelf.addEventListener("click", function(e){
-    console.log(e.target.alt)
-    let currentDrink = cocktails[rndmCocktailIdx]
+document.getElementById('components')
+        .addEventListener('click', guessPush)
+       
+        document.getElementById('components')
+        .addEventListener('click', renderCup)
 
-    if(e.target.alt === undefined) return
 
-    if(currentDrink.ingredients.includes(e.target.alt) ){
-        console.log("match")
-    } else {
-        console.log("no match")
-    }
-    
+
+document.getElementById("serveDrink")
+    .addEventListener("click", function() {
+        let win = false;
+        guess.forEach(e => { 
+                round.forEach(re => {
+                     
+            if(e !== re){
+                win = false;
+            return;
+            }
+            else {
+                win = true;
+            }
+    })
 })
+if (win === true) {
+    console.log('you win');
+} 
+else {
+    console.log('you lose');
+}
+    })     
+               
+    
 
-document.querySelector("button")
+
+document.getElementById("start")
     .addEventListener("click", function() {
     rndmCocktailIdx = Math.floor(Math.random() * cocktails.length); //pulls a random index of cocktails
     displayEl.innerText = cocktails[rndmCocktailIdx].name; //logs the name associated with that index
 
 });
 
+function renderCup(evt) {
+    let selectedIngredient = evt.target.getAttribute('alt');
+    switch(selectedIngredient) {
+        case 'Cranberry Juice':
+            console.log('you picked cranberry');
+            let mainDiv = document.getElementById('glass');
+            let cranDiv =  document.createElement('div');
+            cranDiv.style.backgroundColor =  'red';
+            appendChild(cranDiv);
+    }
+    
+    
+
+}
+function ingCheck (array) {
+    if(guess.length === array.length) {
+        components.removeEventListener("click", guessPush) //event listener turns off after theyve reach the number of ingredients in the drink shown at top
+        console.log('yooooo');
+    }   
+}
+
+
+// 
+function guessPush (e) {
+    
+    let currentDrink = cocktails[rndmCocktailIdx].ingredients
+
+
+    if(e.target.alt === undefined) return
+
+    guess.push(e.target.alt) //push the users guess into an array
+
+    e.target.style.display = "none"
+
+    ingCheck(currentDrink)
+    
+    round = currentDrink;
+    // round.push(currentDrink);
+    currentDrink = '';
+
+};
+
+
+
+
 
 //     guessedIng = "_".repeat(orderedCocktail.length);
 //     ingredientsUsed = [];
 //     wrongIng = [];
 //     render();
-// }
-// var displayDrinkEl;
-
-// document.querySelector('.start').addEventListener('click', function() {;
-//     render();
-//   });
-
-// const oldFashioned = {
-//     liquor: [2oz, bourbonEl],
-//     addins: [.25, bittersEl],
-//     garnish: orangePeelEl
-// };
-
-// const margarita = {
-//     liquor: [2oz, tequillaEl, 1oz, cointreauEl]
-//     addins: [1oz, limeJuiceEl]
-//     garnish: saltEl
-// };
-
-// const cosmopolitan = {
-//     liquor: [1.5oz, vodkaEl, 1oz, cointreauEl]
-//     addins: [.5oz, limeJuiceEl, .25oz, cranberryJuiceEl]
-//     garnish: null
-// };
-
-// const drinks = [oldFashioned, margarita, cosmopolitan];
-
-
-
-// const easyDrinks = []
-
-// const mediumDrinks = []
-
-// const difficultDrinks = []
-
-// var makeDrink = document.getElementById(drinkName);
-//      
-// }
-
-// renderDrink()
-
