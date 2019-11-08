@@ -1,0 +1,22 @@
+{
+  "name": "browser-game",
+  "version": "1.0.0",
+  "description": "_____________________",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bmzwayer/BZ_BrowserGame_Mixology.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bmzwayer/BZ_BrowserGame_Mixology/issues"
+  },
+  "homepage": "https://github.com/bmzwayer/BZ_BrowserGame_Mixology#readme",
+  "dependencies": {
+    "surge": "^0.21.3"
+  }
+}

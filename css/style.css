@@ -7,10 +7,24 @@ body {
     width: auto;
     background-repeat: no-repeat;
     background-position-y: 80px;
+    background-position-x: center;
+    position: relative;
+}
+#start {
+    height: 35px;
+    width: 50px;
+    margin: 20px 0 0 0;
 }
 li {
     display: inline-block;
     padding: 10px;
+}
+span {
+    color: indigo;
+}
+h1 {
+    line-height: 20px;
+    font-size: 40px;
 }
 img {
     max-height: 40px;
@@ -31,35 +45,124 @@ h1 span {
       transform: scale(1.5);
   }
 
-  #glass {
-      display: flex;
-      border: solid black;
-      flex-direction: column-reverse;
-      background-image:  url("../images/drinkingglass.png");
-      height: 200px;
-      width: 200px;
-
-  }
+#headline {
+    display: inline-flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 20px;
+}
 #liquors {
     display:inline-flex;
+    height: 30px;
+    width: auto;
+    justify-content: space-between;
 }
 
 #components {
     display: flex;
     flex-direction: column;
+    margin: 50px 0 0 300px;
+    height: auto;
+    width: auto;
+    position: relative;
+    align-content: space-between;
+}
+#navBtns {
+    float: right;
+    margin: 150px 0 0 0;
+    background-color: indigo;
 }
 
-  .cranBox {
-      background-color: red;
-      position:absolute;
-      width: 40px; /*this needs to be the width of the parent container */
-      height: 40px;
-  }
+.ingBox {
+width: 55px;
+height: 15px;
 
+}
 
-  .limeBox {
+ #cranId {
+    background-image: url("../images/cranberryjuiceColor.png");
+ }
+ #limeJuiceId {
+    background-image: url("../images/limejuiceColor.png");
+ }
+ #bittersId {
+    background-image: url("../images/bittersColor.png");
+ }
+ #cointreauId {
+    background-image: url("../images/cointreauColor.png");
+ }
+ #absintheId {
+    background-image: url("../images/absintheColor.png");
+ }
+ #simpsyrupId {
+    background-image: url("../images/simpleSyrup.jpeg");
+ }
+ #grapefruitId {
+    background-image: url("../images/grapefruitColor.png");
+ }
+ #champagneId {
+    background-image: url("../images/champagne.jpeg");
+ }
+ #cognacId {
+    background-image: url("../images/cognac.jpg");
+ }
+ #gingerbeerId {
+    background-image: url("../images/gingerBeer.jpeg");
+ }
+ #vermouthId {
+    background-image: url("../images/vermouthColor.png");
+ }
+ #lemonJuiceId {
+    background-image: url("../images/lemonjuiceColor.png");
+ }
+ #campariId {
+    background-image: url("../images/campariColor.png");
+ }
+ #sugarId {
+    background-color: white;
+ }
+ #orangePeelId {
+    background-color: orange;
+ }
+ #saltId {
+    background-color: white;
+ }
+ #limeId {
     background-color: green;
-    position:absolute;
-    width: 40px; /*this needs to be the width of the parent container */
-    height: 40px;
+ }
+#bourbonId {
+    background-image: url("../images/bourbonColor.png");
+}
+#vodkaId {
+    background-image: url("../images/vodkaColor.png");
+}
+#ginId {
+    background-image: url("../images/ginColor.png");
+}
+#whiskeyId {
+    background-image: url("../images/whiskeyColor.png");
+}
+#tequillaId {
+    background-image: url("../images/tequillaColor.png");
+}
+#darkRumId {
+    background-image: url("../images/darkRumColor.png");
+}
+#lightRumId {
+    background-image: url("../images/lightRumColor.png");
+}
+
+#glass {
+    display: flex;
+    flex-direction: column-reverse;
+    background-image:  url("../images/drinkingglass.png");
+    background-size: cover;
+    background-position-x: -35px;
+    height: 145px;
+    width: 80px;
+    background-repeat: no-repeat;
+    padding: 0 0 30px 10px;
+    float: right;
+    margin: -140px 400px 0 0;
+    position: relative;
 }

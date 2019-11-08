@@ -163,6 +163,7 @@ document.getElementById('components')
 document.getElementById("serveDrink")
     .addEventListener("click", function() {
         let win = false;
+        console.log(guess);
         guess.forEach(e => { 
                 round.forEach(re => {
                      
@@ -177,9 +178,11 @@ document.getElementById("serveDrink")
 })
 if (win === true) {
     console.log('you win');
+    alert("you win");
 } 
 else {
     console.log('you lose');
+    alert("you lose");
 }
     })     
                
@@ -188,7 +191,7 @@ else {
 
 document.getElementById("start")
     .addEventListener("click", function() {
-    rndmCocktailIdx = Math.floor(Math.random() * cocktails.length); //pulls a random index of cocktails
+    rndmCocktailIdx = Math.floor(Math.random() * (cocktails.length-1)); //pulls a random index of cocktails
     displayEl.innerText = cocktails[rndmCocktailIdx].name; //logs the name associated with that index
 
 });
@@ -200,74 +203,199 @@ function renderCup(evt) {
         case 'Cranberry Juice':
             console.log('you picked cranberry');
             let cranDiv =  document.createElement('div');
-            cranDiv.classList.add('cranBox');
+            cranDiv.classList.add('ingBox');
+            cranDiv.setAttribute('id', 'cranId')
             bigDiv.appendChild(cranDiv);
             break;
+
         case 'Lime Juice':
             console.log('you picked lime juice');
-            let limeDiv =  document.createElement('div');
-            limeDiv.classList.add('limeBox');
-            bigDiv.appendChild(limeDiv);
+            let limeJuiceDiv =  document.createElement('div');
+            limeJuiceDiv.classList.add('ingBox');
+            limeJuiceDiv.setAttribute('id', 'limeJuiceId')
+            bigDiv.appendChild(limeJuiceDiv);
             break;
+
         case 'Bitters':
             console.log('you picked bitters');
             let bittersDiv =  document.createElement('div');
-            bittersDiv.classList.add('bittersBox');
+            bittersDiv.classList.add('ingBox');
+            bittersDiv.setAttribute('id', 'bittersId')
             bigDiv.appendChild(bittersDiv);
             break;
+
         case 'Cointreau':
             console.log('you picked cointreau');
             let cointreauDiv =  document.createElement('div');
-            cointreauDiv.classList.add('cointreauBox');
+            cointreauDiv.classList.add('ingBox');
+            cointreauDiv.setAttribute('id', 'cointreauId')
             bigDiv.appendChild(cointreauDiv);
             break;
+
         case 'Absinthe':
             console.log('you picked absinthe');
             let absintheDiv =  document.createElement('div');
-            absintheDiv.classList.add('absintheBox');
-            bigDiv.appendChild(limeDiv);
+            absintheDiv.classList.add('ingBox');
+            absintheDiv.setAttribute('id', 'absintheId')
+            bigDiv.appendChild(absintheDiv);
             break;
+
         case 'Simple Syrup':
             console.log('you picked simple syrup');
             let simpsyrupDiv =  document.createElement('div');
-            simpsyrupDiv.classList.add('simpsyrupBox');
+            simpsyrupDiv.classList.add('ingBox');
+            simpsyrupDiv.setAttribute('id', 'simpsyrupId')
             bigDiv.appendChild(simpsyrupDiv);
             break;
+
         case 'Grapefruit Juice':
             console.log('you picked grapefruit juice');
             let grapefruitDiv =  document.createElement('div');
-            grapefruitDiv.classList.add('grapefruitBox');
+            grapefruitDiv.classList.add('ingBox');
+            grapefruitDiv.setAttribute('id', 'grapefruitId')
             bigDiv.appendChild(grapefruitDiv);
             break;
+
         case 'Champagne':
             console.log('you picked champagne');
             let champagneDiv =  document.createElement('div');
-            champagneDiv.classList.add('champagneBox');
+            champagneDiv.classList.add('ingBox');
+            champagneDiv.setAttribute('id', 'champagneId')
             bigDiv.appendChild(champagneDiv);
             break;
+
         case 'Cognac':
             console.log('you picked cognac');
             let cognacDiv =  document.createElement('div');
-            cognacDiv.classList.add('cognacBox');
+            cognacDiv.classList.add('ingBox');
+            cognacDiv.setAttribute('id', 'cognacId')
             bigDiv.appendChild(cognacDiv);
             break;
+
         case 'Ginger Beer':
             console.log('you picked ginger beer');
             let gingerbeerDiv =  document.createElement('div');
-            gingerbeerDiv.classList.add('gingerbeerBox');
+            gingerbeerDiv.classList.add('ingBox');
+            gingerbeerDiv.setAttribute('id', 'gingerbeerId')
             bigDiv.appendChild(gingerbeerDiv);
             break;
+
         case 'Vermouth':
             console.log('you picked vermouth');
             let vermouthDiv =  document.createElement('div');
-            vermouthDiv.classList.add('vermouthBox');
+            vermouthDiv.classList.add('ingBox');
+            vermouthDiv.setAttribute('id', 'vermouthId')
             bigDiv.appendChild(vermouthDiv);
             break;
-    }
-    
+
+            case 'Lemon Juice':
+            console.log('you picked lemon juice');
+            let lemonJuiceDiv =  document.createElement('div');
+            lemonJuiceDiv.classList.add('ingBox');
+            lemonJuiceDiv.setAttribute('id', 'lemonJuiceId')
+            bigDiv.appendChild(lemonJuiceDiv);
+            break;
+
+            case 'Campari':
+            console.log('you picked campari');
+            let campariDiv =  document.createElement('div');
+            campariDiv.classList.add('ingBox');
+            campariDiv.setAttribute('id', 'campariId')
+            bigDiv.appendChild(campariDiv);
+            break;
+
+            case 'Sugar':
+            console.log('you picked sugar');
+            let sugarDiv =  document.createElement('div');
+            sugarDiv.classList.add('ingBox');
+            sugarDiv.setAttribute('id', 'sugarId')
+            bigDiv.appendChild(sugarDiv);
+            break;
+
+            case 'Orange Peel':
+            console.log('you picked vermouth');
+            let orangePeelDiv =  document.createElement('div');
+            orangePeelDiv.classList.add('ingBox');
+            orangePeelDiv.setAttribute('id', 'orangePeelId')
+            bigDiv.appendChild(orangePeelDiv);
+            break;
+
+            case 'Salt':
+            console.log('you picked salt');
+            let saltDiv =  document.createElement('div');
+            saltDiv.classList.add('ingBox');
+            saltDiv.setAttribute('id', 'saltId')
+            bigDiv.appendChild(saltDiv);
+            break;
+
+            case 'Lime':
+            console.log('you picked lime');
+            let limeDiv =  document.createElement('div');
+            limeDiv.classList.add('ingBox');
+            limeDiv.setAttribute('id', 'limeId')
+            bigDiv.appendChild(limeDiv);
+            break;
+
+            case 'Bourbon':
+            console.log('you picked bourbon');
+            let bourbonDiv =  document.createElement('div');
+            bourbonDiv.classList.add('ingBox');
+            bourbonDiv.setAttribute('id', 'bourbonhId')
+            bigDiv.appendChild(bourbonDiv);
+            break;
+
+            case 'Vodka':
+            console.log('you picked vodka');
+            let vodka =  document.createElement('div');
+            vodkaDiv.classList.add('ingBox');
+            vodkaDiv.setAttribute('id', 'vodkaId')
+            bigDiv.appendChild(vodkaDiv);
+            break;
+
+            case 'Gin':
+            console.log('you picked gin');
+            let ginDiv =  document.createElement('div');
+            ginDiv.classList.add('ingBox');
+            ginDiv.setAttribute('id', 'ginId')
+            bigDiv.appendChild(ginDiv);
+            break;
+
+            case 'Whiskey':
+            console.log('you picked whiskey');
+            let whiskeyDiv =  document.createElement('div');
+            whiskeyDiv.classList.add('ingBox');
+            whiskeyDiv.setAttribute('id', 'whiskeyId')
+            bigDiv.appendChild(whiskeydiv);
+            break;
+
+            case 'Tequilla':
+            console.log('you picked tequilla');
+            let tequillaDiv =  document.createElement('div');
+            tequillaDiv.classList.add('ingBox');
+            tequillaDiv.setAttribute('id', 'tequillaId')
+            bigDiv.appendChild(tequillaDiv);
+            break;
+
+            case 'Dark Rum':
+            console.log('you picked dark rum');
+            let darkRumDiv =  document.createElement('div');
+            darkRumDiv.classList.add('ingBox');
+            darkRumDiv.setAttribute('id', 'darkRumId')
+            bigDiv.appendChild(darkRumDiv);
+            break;
+
+            case 'Light Rum':
+            console.log('you picked light rum');
+            let lightRumDiv =  document.createElement('div');
+            lightRumDiv.classList.add('ingBox');
+            lightRumDiv.setAttribute('id', 'lightRumId')
+            bigDiv.appendChild(lightRumDiv);
+            break;
+    }}
+
     
 
-}
+
 function ingCheck (array) {
     if(guess.length === array.length) {
         components.removeEventListener("click", guessPush) //event listener turns off after theyve reach the number of ingredients in the drink shown at top
@@ -295,12 +423,3 @@ function guessPush (e) {
     currentDrink = '';
 
 };
-
-
-
-
-
-//     guessedIng = "_".repeat(orderedCocktail.length);
-//     ingredientsUsed = [];
-//     wrongIng = [];
-//     render();

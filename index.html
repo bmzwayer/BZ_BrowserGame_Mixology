@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-   
-    <h1>Make this: <span>drink</span></h1>
-    <button id="start">start</button>
+    <section id="headline">
+     <h1>Make this: <span>click start</span></h1>
+     <button id="start">start</button>
+    </section>
     
     <div id="components">
         <div id="topShelf">
@@ -38,8 +39,8 @@
             <li id="limes" class="ing"><img src="images/limes.jpeg" alt="Lime"></li>
         </div>
 
-        <div id="liquors">
-            <ul>
+        <div>
+            <ul id="liquors"></ul>
                 <li id="bourbon" class="ing"><img src="images/bourbon.jpeg" alt="Bourbon"></li>
                 <li id="vodka" class="ing"><img src="images/vodka.jpeg" alt="Vodka"></li>
                 <li id="gin" class="ing"><img src="images/gin.jpeg" alt="Gin"></li>
@@ -51,16 +52,15 @@
         </div>
     </div>
     
-    <div id="glass">
-        <!-- <img id= "glassImage" src="images/glassCup.jpg" alt="Glass Cup"> -->
+
+    <div id="glass"></div>
+
+    <div id="navBtns">
+        <button id="pourout">Dump Items</button>
+        <button id="exitGame">Exit Game</button>
+        <button id="serveDrink">Serve Drink</button>
+        <script src="js/main.js"></script>
     </div>
-
-
-    <button id="pourout">Dump Items</button>
-    <button id="exitGame">Exit Game</button>
-    <button id="serveDrink">Serve Drink</button>
-    <script src="js/main.js"></script>
-
 </body>
 </html>
 
