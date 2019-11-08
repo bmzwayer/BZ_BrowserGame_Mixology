@@ -62,23 +62,8 @@ Pull objects via getElementById for all ingredient buttons
 // const orangePeelEl= document.getElementById(orangePeel);
 // const saltEl= document.getElementById(salt);
 
-//drinks with ingredients
-//___________________________________________________________________
-//apps state (variables)
-
  
-
-
-//cached----------------------------
-
-// const guessedCocktailEl = document.getElementById(cocktailName);
-
-//constants-------------------------
-
-
-//functions-------------------------*/
-
-
+//data structure:
 
 const cocktails = [
     {
@@ -140,6 +125,7 @@ const cocktails = [
 //     guessedCocktailEl.textContent = guessedIng;
 // }
 
+//constants
 
 const displayEl = document.querySelector('span');
 const pouroutBtn = document.getElementById("pourout");
@@ -152,13 +138,14 @@ let guess = [];
 
 
 
-document.getElementById('components')
+document.getElementById('components') //listens for click on any ingredients, then runs push function
         .addEventListener('click', guessPush)
        
         document.getElementById('components')
         .addEventListener('click', renderCup)
 
 
+//nest for each function-- listen to servedrink click then it loops through each array to see if it includes the selected item
 
 document.getElementById("serveDrink")
     .addEventListener("click", function() {
@@ -178,16 +165,14 @@ document.getElementById("serveDrink")
 })
 if (win === true) {
     console.log('you win');
-    alert("you win");
+    alert("you win!");
 } 
 else {
     console.log('you lose');
-    alert("you lose");
+    alert("you lose!");
 }
     })     
                
-    
-
 
 document.getElementById("start")
     .addEventListener("click", function() {
@@ -196,6 +181,8 @@ document.getElementById("start")
 
 });
 
+
+//sets the divs of clicked ingredient to correspond to that drinks color and stack them on each other
 function renderCup(evt) {
     let selectedIngredient = evt.target.getAttribute('alt');
     let bigDiv = document.getElementById('glass');
@@ -340,13 +327,13 @@ function renderCup(evt) {
             console.log('you picked bourbon');
             let bourbonDiv =  document.createElement('div');
             bourbonDiv.classList.add('ingBox');
-            bourbonDiv.setAttribute('id', 'bourbonhId')
+            bourbonDiv.setAttribute('id', 'bourbonId')
             bigDiv.appendChild(bourbonDiv);
             break;
 
             case 'Vodka':
             console.log('you picked vodka');
-            let vodka =  document.createElement('div');
+            let vodkaDiv =  document.createElement('div');
             vodkaDiv.classList.add('ingBox');
             vodkaDiv.setAttribute('id', 'vodkaId')
             bigDiv.appendChild(vodkaDiv);
@@ -365,7 +352,7 @@ function renderCup(evt) {
             let whiskeyDiv =  document.createElement('div');
             whiskeyDiv.classList.add('ingBox');
             whiskeyDiv.setAttribute('id', 'whiskeyId')
-            bigDiv.appendChild(whiskeydiv);
+            bigDiv.appendChild(whiskeyDiv);
             break;
 
             case 'Tequilla':
@@ -396,10 +383,10 @@ function renderCup(evt) {
     
 
 
-function ingCheck (array) {
+function ingCheck (array) { //checks chosen array length, to add the guesses to and array AND remove the event listener so user can no longer select any more ingredients
     if(guess.length === array.length) {
-        components.removeEventListener("click", guessPush) //event listener turns off after theyve reach the number of ingredients in the drink shown at top
-        console.log('yooooo');
+        components.removeEventListener("click", guessPush) 
+        console.log('max ingredients');
     }   
 }
 
@@ -407,19 +394,19 @@ function ingCheck (array) {
 // 
 function guessPush (e) {
     
-    let currentDrink = cocktails[rndmCocktailIdx].ingredients
+    let currentDrink = cocktails[rndmCocktailIdx].ingredients //finds random index number
 
 
-    if(e.target.alt === undefined) return
+    if(e.target.alt === undefined) return //if they click in white space it doesnt return anything
 
-    guess.push(e.target.alt) //push the users guess into an array
+    guess.push(e.target.alt) //push the users guess of ingredient into an array
 
-    e.target.style.display = "none"
+    e.target.style.display = "none" //disappears after selected
 
     ingCheck(currentDrink)
     
-    round = currentDrink;
+    round = currentDrink; //needed to make this a global variable thats why round is assigned at top to empty
     // round.push(currentDrink);
-    currentDrink = '';
+    currentDrink = ''; //clears out the currentDrink array now that its in round
 
 };
