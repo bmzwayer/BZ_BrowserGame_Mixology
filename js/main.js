@@ -35,12 +35,12 @@ const cocktails = [
         ingredients: ["Tequila","Lime Juice","Grapefruit Juice"],
     },
     {
-        name: "Sazerac",
-        ingredients: ["Whiskey","Simple Syrup","Bitters","Absinthe"],
-    },
-    {
         name: "French 75",
         ingredients: ["Gin", "Champagne","Simple Syrup","Lemon Juice"],
+    },
+    {
+        name: "Sazerac",
+        ingredients: ["Whiskey","Simple Syrup","Bitters","Absinthe"],
     }
 ]
 
@@ -54,7 +54,6 @@ let round = '';
 let rndmCocktailIdx;
 
 let guess = [];
-
 
 
 document.getElementById('components') //listens for click on any ingredients, then runs push function
@@ -96,6 +95,7 @@ else {
 
 document.getElementById("start")
     .addEventListener("click", function() {
+       
     rndmCocktailIdx = Math.floor(Math.random() * (cocktails.length)); //pulls a random index of cocktails
     displayEl.innerText = cocktails[rndmCocktailIdx].name; //logs the name associated with that index
 
@@ -329,6 +329,17 @@ function guessPush (e) {
     currentDrink = ''; //clears out the currentDrink array now that its in round
 
 };
+
+
+
+
+
+
+
+
+
+
+
 
 //add timer
 // var deadline = new Date(":15").getTime(); 
