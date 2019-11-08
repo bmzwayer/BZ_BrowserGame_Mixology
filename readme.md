@@ -41,8 +41,7 @@ __A user should _not_ be able to:__
 ____________________
  ![Wireframe 1](https://github.com/bmzwayer/BZ_BrowserGame_Mixology/blob/master/images/Mixologyscrnsht1.png)
  ![Wireframe 2](https://github.com/bmzwayer/BZ_BrowserGame_Mixology/blob/master/images/Mixologyscrnsht2.png)
- ![Wireframe 3](https://github.com/bmzwayer/BZ_BrowserGame_Mixology/blob/master/images/Mixologyscrnsht2.png)
- ![Wireframe 4](https://github.com/bmzwayer/BZ_BrowserGame_Mixology/blob/master/mixologyscrnsht4.png)
+ ![Wireframe 3](https://github.com/bmzwayer/BZ_BrowserGame_Mixology/blob/master/images/Mixologyscrsht3.png)
 
 
 ## Technologies
