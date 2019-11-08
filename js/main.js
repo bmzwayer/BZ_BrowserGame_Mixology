@@ -137,6 +137,47 @@ let rndmCocktailIdx;
 let guess = [];
 
 
+//add timer
+// var deadline = new Date(":15").getTime(); 
+  
+// var x = setInterval(function() { 
+  
+// var now = new Date().getTime(); 
+// var seconds = Math.floor((t % (1000 * 60)) / 1000);  
+// document.getElementById("second").innerHTML =seconds;  
+// if (t < 0) { 
+//         clearInterval(x); 
+//         document.getElementById("demo").innerHTML = "TIME UP";  
+//         document.getElementById("second").innerHTML = '0'; } 
+// }, 1000); 
+
+// function start_timer() {
+//     var timer = document.getElementById("my_timer").innerHTML;
+//     var arr = timer.split(":");
+//     var hour = arr[0];
+//     var min = arr[1];
+//     var sec = arr[2];
+//     if(sec === 0) {
+//         if(min === 0) {
+//             if(hour === 0){
+//                 alert("Out of Time!");
+//                 window.location.reload();
+//                 return;
+//             }
+//             hour--;
+//             min = 0;
+//             if(hour < 10) hour = "0" + hour;
+//         }
+//         min--;
+//         if(min < 10) min = "0" + min;
+//         sec = 15;
+//     }
+//     else sec --;
+//     if(sec < 10) sec = "0" + sec;
+
+//     document.getElementById("my_timer").innerHTML = hour + ":" + min + ":" + sec;
+//     setTimeout(start_timer, 1000);
+// }
 
 document.getElementById('components') //listens for click on any ingredients, then runs push function
         .addEventListener('click', guessPush)
