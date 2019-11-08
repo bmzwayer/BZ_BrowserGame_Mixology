@@ -44,23 +44,6 @@ const cocktails = [
     }
 ]
 
-// if the guess for liquor is === my object.liquor  then say yes you got it right or say no try again. 
-
-// const guesses = []
-
-// guesses ["bourbon", "lime juice", "sugar"]
-
-// if the value of the things in side my array match the value of the things inside my database 
-// then the guess is correct. 
-
-// console.log(cocktails[0].name, cocktails[1].liquor[1])
-
-// init();
-
-// function render() {
-//     guessedCocktailEl.textContent = guessedIng;
-// }
-
 //constants
 
 const displayEl = document.querySelector('span');
@@ -73,47 +56,6 @@ let rndmCocktailIdx;
 let guess = [];
 
 
-//add timer
-// var deadline = new Date(":15").getTime(); 
-  
-// var x = setInterval(function() { 
-  
-// var now = new Date().getTime(); 
-// var seconds = Math.floor((t % (1000 * 60)) / 1000);  
-// document.getElementById("second").innerHTML =seconds;  
-// if (t < 0) { 
-//         clearInterval(x); 
-//         document.getElementById("demo").innerHTML = "TIME UP";  
-//         document.getElementById("second").innerHTML = '0'; } 
-// }, 1000); 
-
-// function start_timer() {
-//     var timer = document.getElementById("my_timer").innerHTML;
-//     var arr = timer.split(":");
-//     var hour = arr[0];
-//     var min = arr[1];
-//     var sec = arr[2];
-//     if(sec === 0) {
-//         if(min === 0) {
-//             if(hour === 0){
-//                 alert("Out of Time!");
-//                 window.location.reload();
-//                 return;
-//             }
-//             hour--;
-//             min = 0;
-//             if(hour < 10) hour = "0" + hour;
-//         }
-//         min--;
-//         if(min < 10) min = "0" + min;
-//         sec = 15;
-//     }
-//     else sec --;
-//     if(sec < 10) sec = "0" + sec;
-
-//     document.getElementById("my_timer").innerHTML = hour + ":" + min + ":" + sec;
-//     setTimeout(start_timer, 1000);
-// }
 
 document.getElementById('components') //listens for click on any ingredients, then runs push function
         .addEventListener('click', guessPush)
@@ -154,7 +96,7 @@ else {
 
 document.getElementById("start")
     .addEventListener("click", function() {
-    rndmCocktailIdx = Math.floor(Math.random() * (cocktails.length-1)); //pulls a random index of cocktails
+    rndmCocktailIdx = Math.floor(Math.random() * (cocktails.length)); //pulls a random index of cocktails
     displayEl.innerText = cocktails[rndmCocktailIdx].name; //logs the name associated with that index
 
 });
@@ -359,14 +301,12 @@ function renderCup(evt) {
     }}
 
     
-
-
 function ingCheck (array) { //checks chosen array length, to add the guesses to and array AND remove the event listener so user can no longer select any more ingredients
-    if(guess.length === array.length) {
+    if(guess.length >= array.length) {
         components.removeEventListener("click", guessPush) 
         console.log('max ingredients');
         components.removeEventListener("click", renderCup) 
-    }   
+    }
 }
 
 
@@ -389,3 +329,45 @@ function guessPush (e) {
     currentDrink = ''; //clears out the currentDrink array now that its in round
 
 };
+
+//add timer
+// var deadline = new Date(":15").getTime(); 
+  
+// var x = setInterval(function() { 
+  
+// var now = new Date().getTime(); 
+// var seconds = Math.floor((t % (1000 * 60)) / 1000);  
+// document.getElementById("second").innerHTML =seconds;  
+// if (t < 0) { 
+//         clearInterval(x); 
+//         document.getElementById("demo").innerHTML = "TIME UP";  
+//         document.getElementById("second").innerHTML = '0'; } 
+// }, 1000); 
+
+// function start_timer() {
+//     var timer = document.getElementById("my_timer").innerHTML;
+//     var arr = timer.split(":");
+//     var hour = arr[0];
+//     var min = arr[1];
+//     var sec = arr[2];
+//     if(sec === 0) {
+//         if(min === 0) {
+//             if(hour === 0){
+//                 alert("Out of Time!");
+//                 window.location.reload();
+//                 return;
+//             }
+//             hour--;
+//             min = 0;
+//             if(hour < 10) hour = "0" + hour;
+//         }
+//         min--;
+//         if(min < 10) min = "0" + min;
+//         sec = 15;
+//     }
+//     else sec --;
+//     if(sec < 10) sec = "0" + sec;
+
+//     document.getElementById("my_timer").innerHTML = hour + ":" + min + ":" + sec;
+//     setTimeout(start_timer, 1000);
+// }
