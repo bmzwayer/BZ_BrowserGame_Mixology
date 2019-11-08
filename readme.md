@@ -47,7 +47,7 @@ ____________________
 ## Current Look
 _______________________
 
-![Wireframe 5]
+![Wireframe 5](https://github.com/bmzwayer/BZ_BrowserGame_Mixology/blob/gh-pages/images/finalLook.png)
 
 
 Access web game here:
