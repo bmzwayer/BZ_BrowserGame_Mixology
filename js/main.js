@@ -174,6 +174,7 @@ else {
     })     
                
 
+
 document.getElementById("start")
     .addEventListener("click", function() {
     rndmCocktailIdx = Math.floor(Math.random() * (cocktails.length-1)); //pulls a random index of cocktails
@@ -387,6 +388,7 @@ function ingCheck (array) { //checks chosen array length, to add the guesses to 
     if(guess.length === array.length) {
         components.removeEventListener("click", guessPush) 
         console.log('max ingredients');
+        components.removeEventListener("click", renderCup) 
     }   
 }
 

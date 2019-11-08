@@ -53,9 +53,10 @@ h1 span {
 }
 #liquors {
     display:inline-flex;
-    height: 30px;
-    width: auto;
+    height: 50px;
+    width: 600px;
     justify-content: space-between;
+    margin: 60px 0 0 0;
 }
 
 #components {
@@ -69,13 +70,13 @@ h1 span {
 }
 #navBtns {
     float: right;
-    margin: 150px 0 0 0;
+    margin: 150px 400px 40px 0;
     background-color: indigo;
 }
 
 .ingBox {
 width: 55px;
-height: 15px;
+height: 25px;
 
 }
 
@@ -163,6 +164,12 @@ height: 15px;
     background-repeat: no-repeat;
     padding: 0 0 30px 10px;
     float: right;
-    margin: -140px 400px 0 0;
+    margin: -230px 400px 0 0;
     position: relative;
+}
+#garnish {
+    margin: 40px 0 0 0;
+}
+#topshelf {
+    margin: 0 0 30px 0;
 }
